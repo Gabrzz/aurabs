@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Aura</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/style2.css" rel="stylesheet" />
+</head>
+
+
+<body class="bg-black text-light">
+
+    <section class="parallax-section">
+        <div class="parallax-background">
+            <video autoplay muted loop id="myVideo">
+                <source src="/assets/video/13495-248644905_medium.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div
+            class="content text-center h-100 d-flex justify-content-center align-items-center flex-column centered-text">
+            <span class="f1 text-light display-1">AURA</span>
+            <span class="f2 text-light h6"><span style="opacity: 30%;">|</span> Marketing <span
+                    style="opacity: 30%;">|</span> I.A <span style="opacity: 30%;">|</span> Automações <span
+                    style="opacity: 30%;">|</span></span>
+        </div>
+        <script>
+            const video = document.getElementById('myVideo');
+            video.playbackRate = 0.6; // 0.5 = 50% da velocidade original
+        </script>
+    </section>
+
+
+    <div class="d-flex flex-column">
+
+
+        <div class="divisor"></div>
+        <div class="divisor2"></div>
+
+        <div class="col-8 mx-auto">
+            <div class="mt-5 mb-1 text-center"><span class="display-6 f1">Aura</span></div>
+            <div class="mb-5 text-center"><span>Automações personalizadas que se adaptam ao seu modo único de
+                    trabalhar.</span></div>
+
+            <div class="d-flex justify-content-center mx-auto"><img style="max-height: 350px;"
+                    src="/assets/img/aura.svg" alt=""></div>
+
+            <div class="divisor"></div>
+        </div>
+    </div>
+
+    <div>
+
+        <div id="waveContainer">
+            <canvas id="waveCanvas"></canvas>
+        </div>
+        <div class="bg-escuro">
+            <div class="pt-3 col-8 mx-auto">
+                <p class="fs-1 text-center"><strong>Sobre Nós</strong></p>
+                <p class="justified">Nascida para revolucionar a forma como pequenas e médias empresas operam.
+                    Combinamos expertise em automação, inteligência artificial e marketing digital para criar soluções
+                    que amplificam resultados e eliminam ineficiências.
+                    Não oferecemos pacotes genéricos. Desenvolvemos ferramentas que se adaptam ao seu fluxo de trabalho,
+                    respeitando a singularidade do seu negócio.</p>
+            </div>
+
+            <div class="divisor-2"></div>
+
+            <div class="">
+                <p class="fs-1 text-center"><strong>Nossos Serviços</strong></p>
+
+                <div class="d-flex justify-content-center">
+                    <div class="servico-2">
+                        <div class="d-flex align-items-center flex-column mb-4 pt-2 pb-1">
+                            <strong>
+                                <p class="t-1 f-25">AUTOMAÇÕES</p>
+                            </strong>
+                            <span class="t-1 f-10">NOSSO DIFERENCIAL</span>
+                        </div>
+                        <p class="t-1">Transformamos processos manuais em fluxos automatizados, economizando tempo e
+                            recursos para sua empresa. Cada solução é construída sob medida, considerando suas
+                            necessidades específicas e métodos de trabalho.<br><br></p>
+                        <span>Benefícios:</span>
+                        <ul class="list">
+                            <li>Redução de até 70% em tarefas operacionais repetitivas</li>
+                            <li>Minimização de erros humanos</li>
+                            <li>Aumento significativo de produtividade</li>
+                            <li>Escalabilidade sem aumento proporcional de custos</li>
+                        </ul>
+                    </div>
+
+                    <div class="servico">
+                        <div class="mb-3 d-flex align-items-center"><strong>
+                                <p class="t-1 f-25">INTELIGÊNCIA ARTIFICIAL</p>
+                            </strong></div>
+                        <p class="t-1">Implementamos soluções de I.A. que potencializam sua tomada de decisão e otimizam
+                            processos internos. Nossas mentorias ajudam sua equipe a extrair o máximo das tecnologias
+                            disponíveis.<br><br></p>
+                        <span>Aplicações práticas:</span>
+                        <ul class="list">
+                            <li><strong>Análise preditiva</strong> para antecipação de tendências de mercado</li>
+                            <li><strong>Chatbots inteligentes</strong> para atendimento 24/7</li>
+                            <li><strong>Sistemas de recomendação</strong> para cross-selling e up-selling</li>
+                            <li><strong>Visão computacional</strong> para controle de qualidade e inspeção</li>
+                        </ul>
+                    </div>
+
+                    <div class="servico">
+                        <div class="mb-3 d-flex align-items-center"><strong>
+                                <p class="t-1 f-25">MARKETING DIGITAL</p>
+                            </strong></div>
+                        <p class="t-1">Estratégias objetivas e mensuráveis para aumentar sua visibilidade online e
+                            converter visitantes em clientes.</p>
+                    </div>
+
+                    <div class="servico">
+                        <div class="mb-4 pt-2 pb-1 d-flex align-items-center flex-column">
+                            <strong>
+                                <p class="t-1 f-25">DESIGN GRÁFICO</p>
+                            </strong>
+                            <span class="t-1 f-10"> & PRODUÇÃO VISUAL</span>
+                        </div>
+                        <p class="t-1">Criamos a identidade visual que seu negócio merece, com materiais que comunicam
+                            profissionalismo e inovação.<br><br></p>
+                        <div class="d-flex">
+                            <div class="vr me-3"></div>
+                            <span class="list fst-italic">"O design não é apenas como algo parece, é como funciona. O
+                                bom design resolve problemas de comunicação." — Steve Jobs</span>
+                        </div>
+                        <p class="list t-1"><br>No ambiente empresarial competitivo, a primeira impressão é
+                            frequentemente visual. Sua identidade gráfica não é apenas estética — é uma poderosa
+                            ferramenta de comunicação que transmite instantaneamente os valores e o posicionamento da
+                            sua empresa.</p>
+                    </div>
+                </div>
+
+                <div class="divisor"></div>
+
+                <div class=" mx-auto">
+                    <p class="fs-1 text-center"><strong>Por Que Escolher a Aura?</strong></p>
+                    <div class="container">
+                        <div class="expandable-box">
+                            <div class="box-title">Personalização real</div>
+                            <div class="box-content">
+                                Soluções que se adaptam ao seu negócio, não o contrário. Desenvolvemos estratégias
+                                exclusivas considerando suas necessidades específicas, garantindo que cada solução seja
+                                realmente personalizada.
+                            </div>
+                        </div>
+
+                        <div class="expandable-box">
+                            <div class="box-title">Presença física</div>
+                            <div class="box-content">
+                                Acompanhamento presencial e suporte direto. Estamos ao seu lado não apenas virtualmente,
+                                mas com visitas periódicas para garantir que tudo esteja funcionando conforme planejado.
+                            </div>
+                        </div>
+
+                        <div class="expandable-box">
+                            <div class="box-title">Resultados mensuráveis</div>
+                            <div class="box-content">
+                                Foco em métricas e retorno sobre investimento. Trabalhamos com KPIs claros e relatórios
+                                detalhados para que você possa acompanhar o progresso e o impacto real das nossas
+                                soluções.
+                            </div>
+                        </div>
+
+                        <div class="expandable-box">
+                            <div class="box-title">Abordagem integrada</div>
+                            <div class="box-content">
+                                Marketing, I.A. e automações trabalhando em sinergia. Combinamos diferentes tecnologias
+                                e estratégias para criar um ecossistema digital completo que potencializa os resultados
+                                do seu negócio.
+                            </div>
+                        </div>
+
+                        <div class="expandable-box">
+                            <div class="box-title">Implementação ágil</div>
+                            <div class="box-content">
+                                Projetos entregues em ciclos rápidos, permitindo que você veja resultados desde as
+                                primeiras semanas. Nossa metodologia ágil elimina longas esperas e proporciona valor
+                                contínuo através de entregas incrementais e adaptáveis.
+                            </div>
+                        </div>
+
+                        <div class="expandable-box">
+                            <div class="box-title">Transferência de conhecimento</div>
+                            <div class="box-content">
+                                Capacitamos sua equipe durante todo o processo, garantindo autonomia nas ferramentas
+                                implementadas. Oferecemos treinamentos e documentação para que vocês possam manter e
+                                evoluir as soluções independentemente.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#262525" fill-opacity="1" d="M0,160L1440,128L1440,0L0,0Z"></path>
+        </svg>
+    </div>
+
+
+    <section class="contact-form-section py-1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Título do Formulário -->
+                    <div class="text-center mb-5">
+                        <h2 class="text-uppercase fw-bold mb-3">Entre em contato</h2>
+                        <p class="text-muted">Transforme sua empresa hoje</p>
+                    </div>
+
+                    <!-- Formulário -->
+                    <form id="contactForm" class="contact-form">
+                        <!-- Nome da Empresa -->
+                        <div class="form-group mb-4">
+                            <label for="companyName" class="form-label visually-hidden">Nome da Empresa</label>
+                            <input type="text" class="form-control form-control-lg" id="companyName"
+                                placeholder="Nome da Empresa" required>
+                        </div>
+
+                        <!-- Nome do Contato -->
+                        <div class="form-group mb-4">
+                            <label for="contactName" class="form-label visually-hidden">Nome do Contato</label>
+                            <input type="text" class="form-control form-control-lg" id="contactName"
+                                placeholder="Nome do Contato" required>
+                        </div>
+
+                        <!-- Linha com Email e Telefone -->
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-4 mb-md-0">
+                                <label for="email" class="form-label visually-hidden">Email</label>
+                                <input type="email" class="form-control form-control-lg" id="email" placeholder="Email"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label visually-hidden">Telefone</label>
+                                <input type="tel" class="form-control form-control-lg" id="phone" placeholder="Telefone"
+                                    required>
+                            </div>
+                        </div>
+
+                        <!-- Área de Interesse -->
+                        <div class="form-group mb-4">
+                            <label for="interest" class="form-label visually-hidden">Área de Interesse</label>
+                            <select class="form-select form-select-lg" id="interest" required>
+                                <option value="" selected disabled>Área de Interesse</option>
+                                <option value="automacoes">Automações</option>
+                                <option value="ia">Inteligência Artificial</option>
+                                <option value="marketing">Marketing Digital</option>
+                                <option value="design">Design Gráfico</option>
+                            </select>
+                        </div>
+
+                        <!-- Mensagem -->
+                        <div class="form-group mb-4">
+                            <label for="message" class="form-label visually-hidden">Mensagem (opcional)</label>
+                            <textarea class="form-control form-control-lg" id="message" rows="4"
+                                placeholder="Mensagem (opcional)"></textarea>
+                        </div>
+
+                        <!-- Botão de Envio -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-5 py-3 text-uppercase">
+                                Solicitar Orçamento
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divisor"></div>
+    <div class="divisor-2"></div>
+
+    <div class="text-center mb-5 d-flex align-items-center justify-content-center flex-column">
+        <div class="bg-connect ">
+            <p class="f5 f-60">Tornando <span class="text-simples f4"><strong>Simples</strong></span></p>
+        </div>
+        <div class="mx-auto"><img class="w-50" src="/assets/img/anjo2.png" alt=""></div>
+        <div class="bg-connect ">
+            <p class="f5 f-60">O que é <span class="text-complexo f3"><strong>Complexo</strong></span></p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+<footer class="footer py-4">
+    <div class="container text-center">
+        <!-- Logo e Informações da Empresa -->
+        <div class="mb-1">
+            <h5 class="text-uppercase fw-bold mb-3">AURA</h5>
+            <p class="mb-1 text-muted">Marketing | I.A | Automações</p>
+        </div>
+
+        <!-- Contato -->
+        <div class="mb-4">
+            <p class="mb-2 small">
+                <i class="bi bi-geo-alt me-2"></i>
+                Uberlândia, Quintino Bocaiúva 1636
+            </p>
+            <p class="mb-2 small">
+                <i class="bi bi-envelope me-2"></i>
+                contato@aurabs.com.br
+            </p>
+            <p class="mb-2 small">
+                <i class="bi bi-telephone me-2"></i>
+                34 8426-3844
+            </p>
+        </div>
+
+        <!-- Redes Sociais -->
+        <div class="social-icons mb-4">
+            <a href="#" class="mx-2">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="#" class="mx-2">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="mx-2">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+        </div>
+
+    </div>
+    <!-- Copyright -->
+    <p class="small text-muted mb-0 text-center">© 2025 Aura. Todos os direitos reservados.</p>
+</footer>
+
+
+
+<!-- Bootstrap Icons (adicione esta linha no head do seu HTML) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+</html>
