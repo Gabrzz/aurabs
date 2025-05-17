@@ -21,9 +21,43 @@
 </head>
 
 
+
+<!-- Header fixo -->
+<header id="fixedHeader" class="fixed-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div id="container-header" class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#hero">
+                <img src="assets/img/aura.svg" alt="Aura" height="24">
+            </a>
+
+            <!-- Botão hamburguer para mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links de navegação -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aura">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
 <body class="bg-black text-light">
 
-    <section class="parallax-section">
+    <section id="hero" class="parallax-section">
         <div class="parallax-background">
             <video autoplay muted loop id="myVideo">
                 <source src="/assets/video/13495-248644905_medium.mp4" type="video/mp4">
@@ -32,9 +66,19 @@
         <div
             class="content text-center h-100 d-flex justify-content-center align-items-center flex-column centered-text">
             <span class="f1 text-light display-1">AURA</span>
-            <span class="f2 text-light h6"><span style="opacity: 30%;">|</span> Marketing <span
-                    style="opacity: 30%;">|</span> I.A <span style="opacity: 30%;">|</span> Automações <span
-                    style="opacity: 30%;">|</span></span>
+            <span id="d-none-mobile" class="f2 text-light h6">
+                <span style="opacity: 30%;">|</span> Marketing 
+                <span style="opacity: 30%;">|</span> I.A 
+                <span style="opacity: 30%;">|</span> Automações 
+                <span style="opacity: 30%;">|</span>
+            </span>
+            <span id="d-none-desktop" class="f2 text-light h6">
+                <span style="opacity: 30%;">|</span> Marketing 
+                <span style="opacity: 30%;">|</span> I.A 
+                <span style="opacity: 30%;">|</span><br>
+                <span style="opacity: 30%;">|</span> Automações 
+                <span style="opacity: 30%;">|</span>
+            </span>
         </div>
         <script>
             const video = document.getElementById('myVideo');
@@ -49,7 +93,7 @@
         <div class="divisor"></div>
         <div class="divisor2"></div>
 
-        <div class="col-8 mx-auto">
+        <div id="aura" class="col-8 mx-auto">
             <div class="mt-5 mb-1 text-center"><span class="display-6 f1">Aura</span></div>
             <div class="mb-5 text-center"><span>Automações personalizadas que se adaptam ao seu modo único de
                     trabalhar.</span></div>
@@ -57,6 +101,16 @@
             <div class="d-flex justify-content-center mx-auto"><img style="max-height: 350px;"
                     src="/assets/img/aura.svg" alt=""></div>
 
+            <div class="text-center mt-5">
+                <span><strong>Nossa missão é clara:</strong> identificar processos complexos que consomem tempo e
+                    recursos valiosos da sua empresa, e transformá-los em fluxos automatizados, intuitivos e
+                    eficientes.</span>
+                <span><br><br>Acreditamos que a tecnologia deve trabalhar para você, não o contrário. Por isso, cada
+                    solução que desenvolvemos é pensada para se integrar naturalmente ao seu modo de trabalhar,
+                    potencializando o que você já faz bem e eliminando obstáculos que impedem seu crescimento.</span>
+                <span><br><br>Na Aura, não apenas implementamos sistemas - construímos pontes entre o potencial da
+                    tecnologia e as necessidades reais do seu negócio.</span>
+            </div>
             <div class="divisor"></div>
         </div>
     </div>
@@ -67,7 +121,7 @@
             <canvas id="waveCanvas"></canvas>
         </div>
         <div class="bg-escuro">
-            <div class="pt-3 col-8 mx-auto">
+            <div id="sobre" class="pt-3 col-sm-10 col-8 mx-auto">
                 <p class="fs-1 text-center"><strong>Sobre Nós</strong></p>
                 <p class="justified">Nascida para revolucionar a forma como pequenas e médias empresas operam.
                     Combinamos expertise em automação, inteligência artificial e marketing digital para criar soluções
@@ -78,10 +132,10 @@
 
             <div class="divisor-2"></div>
 
-            <div class="">
+            <div id="servicos" class="">
                 <p class="fs-1 text-center"><strong>Nossos Serviços</strong></p>
 
-                <div class="d-flex justify-content-center">
+                <div class="d-md-flex d-sm-block justify-content-center">
                     <div class="servico-2">
                         <div class="d-flex align-items-center flex-column mb-4 pt-2 pb-1">
                             <strong>
@@ -123,6 +177,13 @@
                             </strong></div>
                         <p class="t-1">Estratégias objetivas e mensuráveis para aumentar sua visibilidade online e
                             converter visitantes em clientes.</p>
+                        <span><br>Nossos diferenciais:</span>
+                        <ul class="list">
+                            <li><strong>Estratégia orientada por dados:</strong> Utilizamos métricas reais para guiar
+                                decisões e otimizar resultados continuamente.</li>
+                            <li><strong>Foco em conversão:</strong> Priorizamos ações que efetivamente transformam
+                                interesse em vendas, não apenas métricas de vaidade.</li>
+                        </ul>
                     </div>
 
                     <div class="servico">
@@ -210,13 +271,13 @@
             </div>
 
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <svg style="margin: 0; padding:0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#262525" fill-opacity="1" d="M0,160L1440,128L1440,0L0,0Z"></path>
         </svg>
     </div>
 
 
-    <section class="contact-form-section py-1">
+    <section id="contato" class="contact-form-section py-1">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">

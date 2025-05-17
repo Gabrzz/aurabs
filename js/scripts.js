@@ -334,6 +334,80 @@ function showErrorPopup(errorMessage) {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const fixedHeader = document.getElementById('fixedHeader');
+  const heroSection = document.getElementById('hero'); // Usando ID hero
+  
+  // Verificar se os elementos existem
+  if (!fixedHeader) {
+    console.error('Header não encontrado! Verifique o ID "fixedHeader"');
+    return;
+  }
+  
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.fixed-header .nav-link');
+  
+  // Função para verificar a posição da rolagem
+  function checkScroll() {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    
+    // Verificar se estamos na seção hero
+    let isInHeroSection = false;
+    
+    if (heroSection) {
+      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+      isInHeroSection = scrollPosition < heroBottom - 50;
+    }
+    
+    // Mostrar/esconder o header fixo com base na seção atual
+    if (isInHeroSection) {
+      fixedHeader.classList.add('hidden');
+    } else {
+      fixedHeader.classList.remove('hidden');
+    }
+    
+    // Atualizar link ativo com base na seção visível
+    let current = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      const sectionHeight = section.offsetHeight;
+      
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    // Atualizar classes ativas nos links de navegação
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      const href = link.getAttribute('href');
+      if (href && href === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  }
+  
+  // Adicionar evento de rolagem
+  window.addEventListener('scroll', checkScroll);
+  
+  // Verificar a posição inicial
+  setTimeout(checkScroll, 100);
+  
+  // Fechar menu mobile ao clicar em um link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+      }
+    });
+  });
+});
+
+
+
         
 /* CODIGOS TEMPLATE JS */
 
