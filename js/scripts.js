@@ -332,6 +332,58 @@ function showErrorPopup(errorMessage) {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const pin = document.querySelector('.pin');
+    let rotation = 15; // Rotação inicial em graus
+    let isHovering = false;
+    let animationId = null;
+    let speed = 0; // Velocidade de rotação
+    const maxSpeed = 5; // Velocidade máxima
+    const acceleration = 0.2; // Taxa de aceleração
+    const deceleration = 0.1; // Taxa de desaceleração
+
+    function animate() {
+        if (isHovering) {
+            // Acelera até a velocidade máxima
+            speed = Math.min(speed + acceleration, maxSpeed);
+        } else {
+            // Desacelera até parar
+            speed = Math.max(speed - deceleration, 0);
+            if (speed === 0) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+                return;
+            }
+        }
+        
+        // Atualiza a rotação
+        rotation = (rotation + speed) % 360;
+        pin.style.transform = `rotate(${rotation}deg)`;
+        
+        // Continua a animação
+        animationId = requestAnimationFrame(animate);
+    }
+
+    pin.addEventListener('mouseenter', function() {
+        isHovering = true;
+        if (!animationId) {
+            animationId = requestAnimationFrame(animate);
+        }
+    });
+
+    pin.addEventListener('mouseleave', function() {
+        isHovering = false;
+    });
+
+    // Define a rotação inicial
+    pin.style.transform = `rotate(${rotation}deg)`;
+});
+
+
+
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', function() {

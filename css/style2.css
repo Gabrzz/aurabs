@@ -134,10 +134,11 @@
   background-color: rgb(48, 45, 48);
   max-width: 21%;
   margin: 0px 10px;
-  box-shadow: #1c1b1b 2px 2px 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .servico-2 {
+  position: relative;
   padding: 25px;
   border-radius: 50px;
   background-color: #673AB7;
@@ -145,7 +146,7 @@
   color: #F5F5F5;
   max-width: 21%;
   margin: 0px 10px;
-  box-shadow: #1c1b1b 2px 2px 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .t-1 {
@@ -158,6 +159,36 @@
   font-size: 15px;
 }
 
+
+/*CODIGO PARA O PIN DOS SERIÇOS - AJUDA DE I.A*/
+.pin {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    color: #ffd700;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: rotate(15deg);
+    /* Removemos a transition daqui, pois ela conflita com a animação */
+}
+
+.pin {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    color: #ffd700;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
 @media (max-width: 767px) {
   .servico {
     padding: 25px;
@@ -165,7 +196,7 @@
     background-color: rgb(48, 45, 48);
     max-width: 88%;
     margin: 20px auto;
-    box-shadow: #1c1b1b 2px 2px 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
   .servico-2 {
@@ -176,7 +207,7 @@
     color: #F5F5F5;
     max-width: 88%;
     margin: 20px auto;
-    box-shadow: #1c1b1b 2px 2px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
 
