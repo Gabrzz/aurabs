@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/azonix');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Mea+Culpa&family=Shalimar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap');
 
 #myVideo {
   position: fixed;
@@ -11,9 +12,17 @@
   opacity: 50%;
 }
 
+#hero{
+  position: relative;
+}
+
 @media (max-width: 767px) {
   #d-none-mobile{
     display: none;
+  }
+
+  .sobre-mobile{
+
   }
 }
 @media (min-width: 768px) {
@@ -44,9 +53,13 @@
 }
 
 .f5 {
-  font-family: "Mea Culpa", cursive;
+  font-family: "The Nautigal", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+.f-80 {
+  font-size: 80px;
 }
 
 .f-70 {
@@ -859,4 +872,84 @@ canvas {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 4px;
   }
+}
+
+
+
+
+
+/*SETA DA HERO*/
+/* Container da Seta */
+.seta {
+    position: absolute; /* Deve ser absolute dentro da Hero */
+    bottom: 30px; /* Distância do fundo da Hero */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    cursor: pointer;
+    width: 25px; /* Largura total da seta */
+    height: 35px; /* Altura total da área da seta */
+    opacity: 1; /* Começa visível */
+    transition: opacity 0.3s ease-out; /* Suaviza o desaparecimento */
+    pointer-events: auto; /* Permite cliques (se houver) */
+    pointer-events: none;
+  }
+
+/* Estilo base para cada linha da seta */
+.seta span {
+    display: block;
+    position: absolute;
+    width: 100%; /* Largura da span, que será rotacionada */
+    height: 3px; /* Espessura da linha */
+    background-color: #fff;
+    border-radius: 2px;
+    opacity: 0.3; /* Opacidade inicial para a animação */
+    animation: slow-fade-blink 2.5s infinite ease-in-out;
+}
+
+/* Haste Esquerda Inclinada (apontando para baixo) */
+.seta span:nth-child(1) {
+    width: 18px; /* Largura da "perna" inclinada */
+    top: 55%; /* Começa no topo do container .seta */
+    left: calc(50% - 10px); /* Centraliza a base da perna */
+    transform: rotate(45deg); /* Rotação para a direita-abaixo */
+    transform-origin: 0% 0%; /* Rotaciona a partir do canto superior esquerdo da span */
+    animation-delay: 0s;
+}
+
+/* Haste Direita Inclinada (apontando para baixo) */
+.seta span:nth-child(2) {
+    width: 18px; /* Largura da "perna" inclinada */
+    top: 55%; /* Começa no topo do container .seta */
+    right: calc(50% - 10px); /* Centraliza a base da perna */
+    transform: rotate(-45deg); /* Rotação para a esquerda-abaixo */
+    transform-origin: 100% 0%; /* Rotaciona a partir do canto superior direito da span */
+    animation-delay: 0.1s;
+}
+
+/* Haste Vertical Central */
+.seta span:nth-child(3) {
+    width: 3px; /* Espessura da haste central */
+    height: 25px; /* Comprimento da haste central, ajuste se necessário */
+    top: 5px; /* Ponto de conexão com as hastes inclinadas */
+    left: 50%; /* Centraliza */
+    transform: translateX(-50%); /* Ajuste fino para o centro */
+    animation-delay: 0.2s;
+}
+
+
+/* Animação de piscar lenta (apenas opacidade, sem movimento) */
+@keyframes slow-fade-blink {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Classe para o JavaScript remover a seta */
+.seta.hidden-on-scroll {
+    opacity: 0;
+    pointer-events: none;
 }
